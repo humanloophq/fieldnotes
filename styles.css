@@ -56,3 +56,20 @@ body{background:radial-gradient(ellipse at 78% 10%,rgba(123,91,255,.13),transpar
 .footer{background:rgba(11,12,16,.65)}
 .menu-toggle{color:var(--ink)}
 @media(max-width:600px){.nav{background:#101116;border-color:var(--rule)}.nav a{border-color:var(--rule)}.nav .subscribe-link{border-color:var(--accent)}.hero-image{border-radius:15px}.newsletter{padding:28px 20px}.interlude>p{font-size:clamp(50px,14vw,82px)}}
+
+/* Full-bleed editorial hero treatment inspired by the supplied layout reference. */
+.home-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(620px,calc(100svh - 74px),850px);padding-top:22px;background:#0b0c10}
+.home-hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(11,12,16,.96) 0%,rgba(11,12,16,.84) 32%,rgba(11,12,16,.34) 62%,rgba(11,12,16,.16) 100%),linear-gradient(0deg,rgba(11,12,16,.78),transparent 28%,transparent 78%,rgba(11,12,16,.18))}
+.hero-image{position:absolute;inset:0;z-index:-2;display:block;min-height:0;border-radius:0;background:#0b0c10;pointer-events:none}
+.hero-image img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center 52%;filter:saturate(1) contrast(1.05);opacity:.95}
+.hero-image .image-caption{left:auto;right:var(--gutter);bottom:24px}
+.hero-topline,.hero-bottom{position:relative;z-index:1;border-color:rgba(255,255,255,.25)}
+.hero-topline{padding-top:9px;padding-bottom:12px;color:#f3f2f0}
+.hero-grid{position:static;display:flex;flex:1;align-items:center;padding-top:68px;padding-bottom:76px}
+.hero-copy{position:relative;z-index:1;width:min(58%,760px);min-height:0}
+.hero-copy h1{max-width:850px}
+.hero-dek{color:#e1e0e4}
+.hero-byline{color:#c8c6ce}
+.hero-bottom{padding-top:13px;padding-bottom:15px;color:#f3f2f0}
+@media(max-width:600px){.home-hero{min-height:clamp(690px,calc(100svh - 64px),820px);padding-top:13px}.home-hero::after{background:linear-gradient(180deg,rgba(11,12,16,.88) 0%,rgba(11,12,16,.67) 35%,rgba(11,12,16,.2) 68%,rgba(11,12,16,.8) 100%)}.hero-image img{object-position:60% center}.hero-grid{display:flex;padding-top:40px;padding-bottom:55px;align-items:center}.hero-copy{width:100%;max-width:100%}.hero-copy h1{max-width:620px}.hero-topline,.hero-bottom{position:relative}.hero-bottom{padding-top:11px;padding-bottom:11px}}
+
