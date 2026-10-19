@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://humanloophq.github.io/fieldnotes/sitemap.xml
