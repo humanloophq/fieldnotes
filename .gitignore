@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.fieldnotes-*/
+.fieldnotes-build/
+out/
+build/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
